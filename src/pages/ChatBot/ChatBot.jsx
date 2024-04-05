@@ -3,8 +3,18 @@ import sideMenu from "../../assets/images/sideMenu.svg";
 import botMenu from "../../assets/images/stylishBotMenu.svg";
 import './ChatBot.scss';
 import SizeButton from "../../components/Button/Button";
+import { useState, useEffect } from "react";
 
 export default function ChatBot() {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const result = await axios.get(`${api_url}/prompts`);
+            setData(result.data);
+        }
+        fetchData();
+    }, []);
 
     return (
         <>
