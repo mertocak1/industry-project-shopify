@@ -1,0 +1,7 @@
+@use "../../partials/variables.scss" as *;
+
+.navbar-list {
+  display: flex;
+  list-style-type: none;
+  gap: 2vw;
+}

@@ -1,0 +1,25 @@
+@use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
+
+.navbar-list-item {
+  color: $black;
+  font-size: 0.875rem;
+
+  transition: transform 0.1s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @include s-laptop {
+    font-size: 1.1rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $black;
+
+    &:hover {
+      color: $black-hover;
+    }
+  }
+}

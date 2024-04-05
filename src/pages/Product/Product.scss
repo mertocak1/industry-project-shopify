@@ -1,0 +1,52 @@
+@use "../../partials/mixins.scss" as *;
+@use "../../partials/variables.scss" as *;
+@use "../../partials/typography.scss" as *;
+
+.product-section {
+  @include s-laptop {
+    padding: 0 4vw;
+  }
+
+  &__name-wrapper {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+
+  &__name {
+    color: black;
+    font-weight: 600;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    gap: 2vw;
+  }
+  &__details-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
+  &__product-name {
+    margin-bottom: 0;
+  }
+  &__product-subheader {
+    font-weight: 700;
+  }
+
+  &__details-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__size-buttons {
+    display: flex;
+    gap: 1vw;
+  }
+  &__add-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

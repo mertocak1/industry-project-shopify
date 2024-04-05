@@ -1,0 +1,20 @@
+@use "../../partials/mixins.scss" as *;
+
+.hero {
+  position: relative;
+
+  &__header {
+    color: white;
+    position: absolute;
+
+    @include s-laptop {
+      z-index: 100;
+      top: 50%;
+      margin-left: 4vw;
+      font-size: 3rem;
+    }
+  }
+  &__img {
+    width: 100%;
+  }
+}
