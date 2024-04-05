@@ -4,6 +4,8 @@ import botMenu from "../../assets/images/stylishBotMenu.svg";
 import './ChatBot.scss';
 import SizeButton from "../../components/Button/Button";
 import { useState, useEffect } from "react";
+import axios from 'axios';
+import { api_url } from "../../api.js";
 
 export default function ChatBot() {
     const [data, setData] = useState([]);
@@ -15,6 +17,8 @@ export default function ChatBot() {
         }
         fetchData();
     }, []);
+
+    console.log(data);
 
     return (
         <>
