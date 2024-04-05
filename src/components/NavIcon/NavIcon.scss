@@ -1,0 +1,12 @@
+@use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
+
+.nav-icon {
+  transition: transform 0.3s ease;
+  @include s-laptop {
+    width: 25px;
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}
