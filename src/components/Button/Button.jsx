@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.scss";
 
 export default function SizeButton(props) {
-  const { size, style, onClick } = props;
+  const { size, style, onClick, type } = props;
 
   if (style === "add") {
     return (
@@ -22,6 +22,7 @@ export default function SizeButton(props) {
   if (style === "chatbot") {
     return (
       <button
+        type={type}
         onClick={onClick}
         className={`size-button size-button--chatbot-button`}
       >

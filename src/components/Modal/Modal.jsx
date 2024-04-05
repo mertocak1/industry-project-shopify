@@ -15,7 +15,7 @@ export default function Modal({ isOpen, setShowModal }) {
         className="modal"
         overlayClassName="overlay"
       >
-        <div className="modal__flexbox">
+        <form className="modal__flexbox">
           <button
             onClick={() => {
               setShowModal(false);
@@ -43,8 +43,8 @@ export default function Modal({ isOpen, setShowModal }) {
             cols="30"
             rows="10"
           ></textarea>
-          <SizeButton size={"Confirm"} style={"modal"} />
-        </div>
+          <SizeButton size={"Confirm"} style={"modal"} type="submit" />
+        </form>
       </ReactModal>
     </section>
   );

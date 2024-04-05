@@ -2,12 +2,10 @@ import "./Product.scss";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import Button from "../../components/Button/Button";
 import React, { useState } from "react";
-import Modal from "../../components/Modal/Modal";
+
 import NavBar from "../../components/NavBar/NavBar";
 
 export default function Product() {
-  const [showModal, setShowModal] = useState(false);
-
   return (
     <>
       <NavBar />
@@ -30,7 +28,7 @@ export default function Product() {
             <div className="product-section__details-size">
               <h3 className="product-section__product-subheader">Size :</h3>
               <div className="product-section__size-buttons">
-                <Button onClick={() => setShowModal(true)} size={"XS"} />
+                <Button size={"XS"} />
                 <Button size={"S"} />
                 <Button size={"M"} />
                 <Button size={"L"} />
@@ -42,7 +40,6 @@ export default function Product() {
             </div>
           </div>
         </div>
-        <Modal isOpen={showModal} setShowModal={setShowModal} />
       </main>
     </>
   );
