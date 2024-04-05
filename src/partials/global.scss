@@ -1,6 +1,8 @@
 @use "./typography.scss" as *;
+@use "./mixins.scss" as *;
 
 * {
+  box-sizing: border-box;
   font-family: "dmSans";
   font-weight: 700;
 }

@@ -1,0 +1,11 @@
+@use "../../partials/variables.scss" as *;
+@use "../../partials/mixins.scss" as *;
+
+.product-card {
+  @include s-laptop {
+    background-color: $light-grey;
+    border-radius: 10px;
+    width: 32%;
+    height: 65vh;
+  }
+}

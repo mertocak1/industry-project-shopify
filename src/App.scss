@@ -1,7 +1,13 @@
 @use "./partials/global.scss" as *;
+@use "./partials/mixins.scss" as *;
 
 body,
 html {
   padding: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  @include s-laptop {
+    padding-top: 6.8vh;
+  }
 }
