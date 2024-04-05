@@ -24,4 +24,27 @@
       background-color: $dark-grey-hover;
     }
   }
+  &--modal-button {
+    position: absolute;
+    bottom: 8px;
+    color: white;
+    background-color: #173030;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 20%;
+    &:hover {
+      background-color: $dark-grey-hover;
+    }
+  }
+  &--chatbot-button {
+    color: white;
+    background-color: #173030;
+    margin-top: 20px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 50%;
+    &:hover {
+      background-color: $dark-grey-hover;
+    }
+  }
 }
