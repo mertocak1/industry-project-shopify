@@ -5,6 +5,7 @@
 .product-section {
   @include s-laptop {
     padding: 0 4vw;
+    padding-top: 15vh;
   }
 
   &__name-wrapper {

@@ -2,6 +2,7 @@
 
 .modal {
   position: absolute;
+
   background-color: $bej;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -10,6 +11,7 @@
   right: 30%;
   bottom: 25%;
   border-radius: 10px;
+  border: 3px solid rgb(106, 102, 102);
   &__flexbox {
     height: calc(100% - 4rem);
     display: flex;

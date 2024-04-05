@@ -6,9 +6,11 @@ import SizeButton from "../../components/Button/Button";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { api_url } from "../../api.js";
+import Modal from "../../components/Modal/Modal";
 
 export default function ChatBot() {
   const [data, setData] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
@@ -47,20 +49,30 @@ export default function ChatBot() {
             <ul className="inquiries__list">
               <li className="inquiries__item">
                 When will the Dreamweave Sweater restock?
-                <a className="link"> + Add to Chatbot</a>
+                <a onClick={() => setShowModal(true)} className="link">
+                  {" "}
+                  + Add to Chatbot
+                </a>
               </li>
               <li className="inquiries__item">
                 Are the Riley Pleated Pants on sale?
-                <a className="link"> + Add to Chatbot</a>
+                <a onClick={() => setShowModal(true)} className="link">
+                  {" "}
+                  + Add to Chatbot
+                </a>
               </li>
               <li className="inquiries__item">
                 Is the fit of Dusk Linen Shirt true to size?
-                <a className="link"> + Add to Chatbot</a>
+                <a onClick={() => setShowModal(true)} className="link">
+                  {" "}
+                  + Add to Chatbot
+                </a>
               </li>
             </ul>
           </section>
           <SizeButton size={"Add Chatbot Response"} style={"chatbot"} />
         </article>
+        <Modal isOpen={showModal} setShowModal={setShowModal} />
       </main>
     </>
   );
