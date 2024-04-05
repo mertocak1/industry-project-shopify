@@ -1,0 +1,49 @@
+@use "../../partials/mixins.scss" as *;
+@use "../../partials/variables.scss" as *;
+@use "../../partials/typography.scss" as *;
+
+.merchant {
+
+    &__header {
+        display: flex;
+    }
+
+    &__main {
+        display: flex;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-left: 3.75rem;
+        padding-top: 1rem;
+    }
+}
+
+.inquiries {
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: $bej;
+        border-radius: 4px;
+    }
+
+    &__title {
+        padding: 0 1.5rem;
+    }
+
+    &__list {
+        list-style: none;
+        padding-inline-start: 0;
+        padding: 0 1.5rem;
+        margin: 0 0 0.5rem 0;
+    }
+
+    &__item {
+        background-color: white;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 4px;
+    }
+}

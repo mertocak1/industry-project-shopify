@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import Product from "./pages/Product/Product";
 import NavBar from "./components/NavBar/NavBar";
+import ChatBot from "./pages/ChatBot/ChatBot.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
           {/* <Route path="/products" element={} /> */}
           <Route path="/products" element={<Product />} />
+          <Route path="/chatbot" element={<ChatBot />} />
         </Routes>
       </BrowserRouter>
     </>
