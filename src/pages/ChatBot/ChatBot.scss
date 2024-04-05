@@ -6,21 +6,10 @@
 
     &__header {
         display: flex;
-        &-img {
-
-        }
     }
 
     &__main {
         display: flex;
-    }
-
-    &__sideMenu {
-
-    }
-
-    &__botMenu {
-
     }
 
     &__wrapper {
@@ -28,10 +17,6 @@
         flex-direction: column;
         padding-left: 3.75rem;
         padding-top: 1rem;
-    }
-
-    &__title {
-
     }
 }
 
