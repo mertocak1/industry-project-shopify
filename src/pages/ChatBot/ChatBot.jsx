@@ -11,28 +11,31 @@ import Modal from "../../components/Modal/Modal";
 export default function ChatBot() {
     const [data, setData] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [input, setInput] = useState({ question: '', answer: '' });
 
     useEffect(() => {
         async function fetchData() {
-            const result = await axios.get(`${api_url}/prompts`);
-            setData(result.data);
+            try {
+                const result = await axios.get(`${api_url}/prompts`);
+                setData(result.data);
+            } catch (error) {
+                console.error("Failed to fetch data:", error);
+            }
         }
         fetchData();
     }, []);
 
-    console.log(data);
-
-    const handleClick = async (e) => {
-        e.preventDefault();
-
-        const obj = {
-            question,
-            answer
-        };
-        console.log(obj);
-        await axios.post(`${api_url}/prompts`, obj);
-        setShowModal(false);
-    }
+    const handleModalSubmit = async ({ question, answer }) => {
+        try {
+            const response = await axios.post(`${api_url}/prompts`, { question, answer });
+            console.log("Submission successful", response.data);
+            // Optionally, fetch the updated list of prompts to reflect the change
+            // fetchData();
+            setShowModal(false);
+        } catch (error) {
+            console.error("Failed to submit data:", error);
+        }
+    };
 
     return (
         <>
@@ -84,7 +87,7 @@ export default function ChatBot() {
                     </section>
                     <SizeButton size={"Add Chatbot Response"} style={"chatbot"} />
                 </article>
-                <Modal isOpen={showModal} setShowModal={setShowModal} onClick={handleClick}/>
+                <Modal isOpen={showModal} setShowModal={setShowModal} onSubmit={handleModalSubmit}/>
             </main>
         </>
     );
